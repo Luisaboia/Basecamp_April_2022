@@ -1,15 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_str_non_printable.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luisedua <luisedua@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/06 20:49:00 by luisedua          #+#    #+#             */
-/*   Updated: 2022/04/13 21:47:19 by luisedua         ###   ########.fr       */
+/*   Created: 2022/04/13 00:01:37 by luisedua          #+#    #+#             */
+/*   Updated: 2022/04/13 00:01:56 by luisedua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdbool.h>
 #include <unistd.h>
 
 void	ft_putchar(char c)
@@ -17,37 +18,30 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void	ft_putnbr(int nb)
+bool	is_char_printable(char c)
 {
-	if (nb == -2147483648)
-	{
-		ft_putnbr(nb / 10);
-		ft_putchar('8');
-	}
-	else if (nb < 0)
-	{
-		ft_putchar('-');
-		ft_putnbr(-nb);
-	}
-	else
-	{
-		if (nb > 9)
-		{
-			ft_putnbr(nb / 10);
-		}
-		ft_putchar(48 + nb % 10);
-	}
+	return (c >= ' ' && c != 127);
 }
 
-int		main(void)
+void	ft_putstr_non_printable(char *str)
 {
-	ft_putnbr(42);
-	ft_putchar('\n');
-	ft_putnbr(4242);
-	ft_putchar('\n');
-	ft_putnbr(20000706);
-	ft_putchar('\n');
-	ft_putnbr(+2147483647);
-	ft_putchar('\n');
-	ft_putnbr(-2147483648);
+	int				index;
+	unsigned char	current;
+
+	index = 0;
+	while (true)
+	{
+		current = str[index];
+		if (current == '\0')
+			break ;
+		if (is_char_printable(current))
+			ft_putchar(current);
+		else
+		{
+			ft_putchar('\\');
+			ft_putchar("0123456789abcdef"[current / 16]);
+			ft_putchar("0123456789abcdef"[current % 16]);
+		}
+		index++;
+	}
 }
