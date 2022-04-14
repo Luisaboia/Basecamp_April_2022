@@ -11,7 +11,7 @@ Olá! Eu me chamo Luis e aqui estarei colocando todos os meus códigos feitos no
 |    C    |  00   | [100%] OK! <img src="https://imagepng.org/wp-content/uploads/2019/12/check-icone-1-scaled.png" width=15 height=15 align-items="center" /> |
 |    C    |  01   | [100%] OK! <img src="https://imagepng.org/wp-content/uploads/2019/12/check-icone-1-scaled.png" width=15 height=15 align-items="center" /> |
 |    C    |  02   | [100%] OK! <img src="https://imagepng.org/wp-content/uploads/2019/12/check-icone-1-scaled.png" width=15 height=15 align-items="center" /> |
-|    C    |  03   | [?%] In progress..                                                                                                                        |
+|    C    |  03   | [Uploaded] In progress..                                                                                                                        |
 |    C    |  04   | [?%] In progress..                                                                                                                        |
 |    C    |  05   | [?%] In progress..                                                                                                                        |
 |    C    |  06   | [?%] In progress..                                                                                                                        |
