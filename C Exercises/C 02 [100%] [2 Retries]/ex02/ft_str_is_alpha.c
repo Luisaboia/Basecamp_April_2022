@@ -6,11 +6,9 @@
 /*   By: luisedua <luisedua@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 21:13:45 by luisedua          #+#    #+#             */
-/*   Updated: 2022/04/12 23:46:32 by luisedua         ###   ########.fr       */
+/*   Updated: 2022/04/14 01:42:12 by luisedua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 int	ft_str_is_alpha(char *str)
 {

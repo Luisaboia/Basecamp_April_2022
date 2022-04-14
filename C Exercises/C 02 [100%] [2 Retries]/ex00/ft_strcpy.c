@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luisedua <luisedua@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/12 16:00:23 by luisedua          #+#    #+#             */
-/*   Updated: 2022/04/12 21:32:39 by luisedua         ###   ########.fr       */
+/*   Created: 2022/04/12 13:30:58 by luisedua          #+#    #+#             */
+/*   Updated: 2022/04/14 01:51:52 by luisedua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+char	*ft_strcpy(char *dest, char *src)
 {
-	unsigned int		i;
+	int		index;
 
-	i = 0;
-	while (i < n && src[i] != '\0')
+	index = 0;
+	while (src[index] != '\0')
 	{
-		i++;
-		dest[i] = src[i];
+		dest[index] = src[index];
+		index++;
 	}
-	dest[i] = '\0';
-	while (i < n)
-	{
-		dest[i] = '\0';
-		i++;
-	}
+	dest[index] = '\0';
 	return (dest);
 }
