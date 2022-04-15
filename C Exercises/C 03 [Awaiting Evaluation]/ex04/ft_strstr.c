@@ -1,45 +1,66 @@
-#include <stddef.h>
+#include <stdbool.h>
 
-char    *ft_strstr(char *str, char *to_find)
-{
-    int i;
-    int j;
-
-    i = 0;
-    j = 0;
-    while (str[i] != '\0')
-    {
-        if (str[i] == to_find[j])
-        {
-            while (str[i] == to_find[j])
-            {
-                i++;
-                j++;
-            }
-            if (to_find[j] == '\0')
-                return (&str[i - j]);
-            j = 0;
-        }
-        i++;
-    }
-    return (NULL);
-}
-
-#include <stdio.h>
-#include <string.h>
-
-int		main(void)
+char	*ft_strstr(char *str, char *to_find)
 {
 	char *haystack;
 	char *needle;
-	char *result_c;
-	char *result_ft;
 
-	haystack = "Foo Bar Baz";
-	needle = "Bar";
-	result_c = strstr(haystack, needle);
-	result_ft = ft_strstr(haystack, needle);
-	printf("%p / %p\n", result_c, result_ft);
-	printf("c  : %s$\n", result_c);
-	printf("ft : %s$\n", result_ft);
+	if (*to_find == '\0')
+		return (str);
+	haystack = str;
+	needle = to_find;
+	while (true)
+	{
+		if (*needle == '\0')
+			return ((char *)(haystack - (needle - to_find)));
+		if (*haystack == *needle)
+			needle++;
+		else
+			needle = to_find;
+		if (*haystack == '\0')
+			break ;
+		haystack++;
+	}
+	return (0);
+}
+
+// Tests
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+char	*ft_strstr(char *str, char *to_find);
+
+int	main(void)
+{
+	char *str;
+	char *to_find;
+	char *buff;
+	char *ft_buff;
+
+	str = strcpy(calloc(11, sizeof(char)), "alo galera");
+	to_find = strcpy(calloc(7, sizeof(char)), "galera");
+	buff = strstr(str, to_find);
+	ft_buff = ft_strstr(str, to_find);
+	if (buff != ft_buff)
+		printf("[1] KO, substrings don't match(expected:%s, got:%s)\n", buff, ft_buff); 
+	else
+		printf("[1] OK. expected: %s result: %s\n", buff, ft_buff);
+	str = strcpy(calloc(11, sizeof(char)), "alo galera");
+	to_find = strcpy(calloc(7, sizeof(char)), "galerA");
+	buff = strstr(str, to_find);
+	ft_buff = ft_strstr(str, to_find);
+	if (buff != ft_buff)
+		printf("[2] KO, substrings don't match(expected:%s, got:%s)\n", buff, ft_buff); 
+	else
+		printf("[2] OK. expected: %s result: %s\n", buff, ft_buff);
+	str = strcpy(calloc(11, sizeof(char)), "alo galera");
+	to_find = strcpy(calloc(1, sizeof(char)), "");
+	buff = strstr(str, to_find);
+	ft_buff = ft_strstr(str, to_find);
+	if (buff != ft_buff)
+		printf("[2] KO, substrings don't match(expected:%s, got:%s)\n", buff, ft_buff); 
+	else
+		printf("[2] OK. expected: %s result: %s\n", buff, ft_buff);
+	return (0);
 }
