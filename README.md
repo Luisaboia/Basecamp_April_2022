@@ -16,7 +16,7 @@ Olá! Eu me chamo Luis e aqui estarei colocando todos os meus códigos feitos no
 |    C    |  03   | [62%] OK! <img src="https://imagepng.org/wp-content/uploads/2019/12/check-icone-1-scaled.png" width=15 height=15 align-items="center" />          |
 |    C    |  04   | [70%] OK! <img src="https://imagepng.org/wp-content/uploads/2019/12/check-icone-1-scaled.png" width=15 height=15 align-items="center" />       |
 |    C    |  05   | [30%] Error <img src="https://cdn0.iconfinder.com/data/icons/shift-free/32/Error-512.png" width=15 height=15 align-items="center" /> |
-|    C    |  06   | [70%] OK! <img src="https://imagepng.org/wp-content/uploads/2019/12/check-icone-1-scaled.png" width=15 height=15 align-items="center" |
+|    C    |  06   | [70%] OK! <img src="https://imagepng.org/wp-content/uploads/2019/12/check-icone-1-scaled.png" width=15 height=15 align-items="center" /> |
 |    C    |  07   | [?%] In progress... <img src="https://icon-library.com/images/waiting-icon-gif/waiting-icon-gif-1.jpg" width=15 height=15 align-items="center" /> |
 |    C    |  08   | [?%] In progress... <img src="https://icon-library.com/images/waiting-icon-gif/waiting-icon-gif-1.jpg" width=15 height=15 align-items="center" /> |
 |    C    |  09   | [?%] In progress... <img src="https://icon-library.com/images/waiting-icon-gif/waiting-icon-gif-1.jpg" width=15 height=15 align-items="center" /> |
